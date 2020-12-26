@@ -14,12 +14,64 @@
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 
-<body>
+<body topmargin="0">
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <script src="" async defer></script>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html" target="_self">
+            <img src="images/logomarca.svg" alt="Logo">
+          </a>
+        </div>
+        <div class="menu-content">
+          <form action="" class="input-explorer">
+            <input type="text" placeholder="Explorar" class="search-input">
+            <input type="submit" class="icon-search" placeholder=""></input>
+          </form>
+          <nav class="menu">
+            <ul>
+              <li><a href="#">Criar Causa</a></li>
+              <li><a href="#">Cadastre-se</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </nav>
+          <div class="menu-mobile burger">
+            <img src="images/Menu Hamburguer.svg" alt="Menu">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar Mobile -->
+  <nav class="navbar">
+    <div class="container">
+      <ul class="nav-links">
+        <li class="nav-link"><a href="#">Home</a></li>
+        <li class="nav-link"><a href="#">Criar Causa</a></li>
+        <li class="nav-link"><a href="#">Cadastre-se</a></li>
+        <li class="nav-link"><a href="#">Login</a></li>
+        <li class="nav-link"><a href="#">Blog</a></li>
+        <li class="nav-link"><a href="#">Galeria</a></li>
+        <li class="nav-link"><a href="#">Sobre</a></li>
+        <li class="nav-link"><a href="#">Contato</a></li>
+      </ul>
+      <form action="" class="input-explorer hide">
+        <input type="text" placeholder="Explorar" class="search-input">
+        <input type="submit" class="icon-search" placeholder=""></input>
+      </form>
+      <div class="menu-mobile burger close">
+        <img src="images/Menu Hamburguer Close.svg" alt="Menu">
+      </div>
+    </div>
+  </nav>
+
+  <script src="scripts/bundle.js" async defer></script>
 </body>
 
 </html>

@@ -1,0 +1,46 @@
+// Font default
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+
+// Cores do site
+$dark: #040F0F;
+$dark2: #2D3A3A;
+$pri: #248232;
+$sec: #2BA84A;
+$light: #FCFFFC;
+$alert: #FF2B2B;
+
+// Font
+$font-default: 'Montserrat';
+
+// Consulta de media queries
+@mixin tamanho-tela($size) {
+  @if $size==apenas-celular {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+
+  @else if $size==celular {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+
+  @else if $size==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $size==desktop {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $size==desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
