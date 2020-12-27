@@ -1,11 +1,12 @@
 // libs
 @import 'normalize';
 
-// componentes
-@import 'components/variables';
-
 // helpers
+@import 'helpers/variables';
 @import 'helpers/menu-responsive';
+
+// componentes
+@import 'components/banner';
 
 // site
 @import 'base';
