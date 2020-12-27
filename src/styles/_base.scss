@@ -33,6 +33,7 @@ img {
 body {
   background-color: $light;
   color: $dark;
+  font-style: normal;
   font-family: $font-default,
     -apple-system,
     BlinkMacSystemFont,
@@ -121,6 +122,21 @@ body {
           width: 100%;
         }
       }
+    }
+  }
+
+  .menu-mobile {
+    border-radius: 50%;
+    width: 32px;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      border: 2px solid $sec;
+    }
+
+    img {
+      border-radius: 50%;
+      width: inherit;
     }
   }
 }
@@ -226,6 +242,13 @@ main.cont {}
           background-color: $light;
           border-radius: 50%;
         }
+
+        a {
+          &:hover {
+            color: $sec;
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
@@ -254,8 +277,6 @@ main.cont {}
       justify-content: space-between;
       width: 200px;
       margin: 20px 0px;
-
-      li {}
     }
 
   }
