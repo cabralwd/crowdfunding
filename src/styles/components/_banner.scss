@@ -287,8 +287,7 @@
     font-size: 100%;
     min-width: 540px;
     height: 530px;
-    background-size: cover;
-    background-size: 100%;
+    background-size: 100% 100%;
     display: block;
     position: absolute;
     opacity: .08;
@@ -359,6 +358,100 @@
         animation: animaCirclesCenter7 .9s;
         animation-delay: 1.5s;
         animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+
+.banner-mini {
+  margin: 60px 0px 0px;
+
+  .bm-content {
+    background: linear-gradient(264.5deg, $sec 60.48%, $pri 100%);
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include tamanho-tela(desktop) {
+      justify-content: space-between;
+      padding: 10px 20px 0px 20px;
+    }
+  }
+
+  .image-woman {
+    // width: calc(346px / 2);
+    display: block;
+    flex: 0 1 calc(300px);
+    align-self: flex-end;
+
+    @include tamanho-tela(tablet) {
+      flex: 0 1 calc(346px / 2);
+    }
+
+    img {
+      // width: inherit;
+      display: block;
+    }
+  }
+
+  .description {
+    flex: 0 1 575px;
+    background: url('../images/money-mini-banner.svg') no-repeat;
+    background-position: center center;
+    background-size: contain;
+    font-size: 80%;
+    margin: 30px 0px 0px;
+
+    @include tamanho-tela(tablet) {}
+
+    @include tamanho-tela(desktop) {
+      margin: 0;
+      background-size: auto;
+      font-size: 100%;
+    }
+
+    h1 {
+      font-size: 3.125em;
+      color: $light;
+      text-align: center;
+    }
+  }
+
+  .call-to-action {
+    flex: 0 1 100%;
+    text-align: center;
+    margin: 30px 0px 0px;
+    font-size: 100%;
+    color: $light;
+
+    @include tamanho-tela(desktop) {
+      margin: 0;
+      flex: 0 1 165px;
+      text-align: initial;
+    }
+
+    p {
+      font-size: 1.25em;
+    }
+
+    button {
+      background: $dark2;
+      border-radius: 15px;
+      color: $light;
+      border: none;
+      outline: none;
+      padding: 20px 30px;
+      margin: 10px 0px 0px;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:hover {
+        color: $sec;
+        border: 2px solid $light;
+        padding: 18px 28px;
       }
     }
   }
