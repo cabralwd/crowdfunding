@@ -1,6 +1,365 @@
+%propetCircle {
+  top: 50%;
+  left: 50%;
+  width: 20em;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes animaFadeCircles {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animaFadeInfos {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes animaCirclesCenter1 {
+  0% {
+    @extend %propetCircle;
+  }
+
+  100% {
+    width: 10em;
+    top: 15%;
+    left: 0%;
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes animaCirclesCenter2 {
+  0% {
+    @extend %propetCircle;
+  }
+
+  100% {
+    width: 6.5em;
+    top: 28%;
+    left: 38%;
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes animaCirclesCenter3 {
+  0% {
+    @extend %propetCircle;
+  }
+
+  100% {
+    width: 11em;
+    top: 18%;
+    left: 70%;
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes animaCirclesCenter4 {
+  0% {
+    @extend %propetCircle;
+  }
+
+  100% {
+    top: 50%;
+    left: 50%;
+    width: 10em;
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes animaCirclesCenter5 {
+  0% {
+    @extend %propetCircle;
+  }
+
+  100% {
+    top: 75%;
+    left: 31%;
+    width: 6em;
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes animaCirclesCenter6 {
+  0% {
+    @extend %propetCircle;
+  }
+
+  100% {
+    top: 70%;
+    left: 85%;
+    width: 5.4em;
+    transform: translate(0%, 0%);
+  }
+}
+
+@keyframes animaCirclesCenter7 {
+  0% {
+    @extend %propetCircle;
+  }
+
+  100% {
+    top: 50%;
+    left: 17%;
+    width: 8em;
+    transform: translate(0%, 0%);
+  }
+}
+
 .banner {
   position: relative;
   display: block;
-  height: 70vh;
   width: 100%;
+  height: 100vh;
+  background: url('../images/banner-home.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include tamanho-tela(tablet) {
+    height: 85vh;
+  }
+
+  .details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 1130px) {
+      justify-content: space-between;
+    }
+  }
+
+  .titles {
+    width: 560px;
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    animation: animaFadeInfos 2s;
+    z-index: 2;
+    font-size: 80%;
+    text-align: center;
+
+    @include tamanho-tela(celular) {
+      font-size: 100%;
+      text-align: left;
+    }
+
+    h1 {
+      font-weight: 700;
+      color: $light;
+      font-size: 3.125em;
+      padding: 0;
+      margin: 0;
+    }
+
+    p {
+      display: block;
+      width: 100%;
+      color: $sec;
+      font-size: 2em;
+      margin-top: 0.3125em;
+    }
+  }
+
+  .create-action {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1rem;
+
+    .money {
+      font-size: 1rem;
+      position: relative;
+      border: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+      @include tamanho-tela(celular) {
+        width: 120px;
+      }
+
+      label {
+        position: absolute;
+        top: 17px;
+        left: 15px;
+        color: rgba($light, 0.5);
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+
+    input {
+      display: block;
+      color: $light;
+      border-radius: 15px;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-family: $font-default,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol';
+      -webkit-font-smoothing: antialiased;
+
+      &::placeholder {
+        font-weight: 700;
+        color: rgba($light, .5);
+      }
+
+      &[type="email"],
+      &[type="number"] {
+        background-color: $dark2;
+        border: 1px dashed $light;
+        padding: 1rem;
+        outline-color: $sec;
+      }
+
+      &[type="number"] {
+        width: inherit;
+        position: relative;
+        padding-left: 45px !important;
+      }
+
+      &[type="email"] {
+        width: 100%;
+        margin-top: 15px;
+
+        @include tamanho-tela(celular) {
+          width: 240px;
+          margin: 0;
+        }
+      }
+
+      &[type="submit"] {
+        padding: 0 25px;
+        background-color: $sec;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        outline: none;
+        min-height: 57px;
+        margin: 15px 0;
+        width: 100%;
+
+        @include tamanho-tela(celular) {
+          margin: 0;
+          width: auto;
+        }
+
+        &:hover {
+          box-sizing: border-box;
+          background-color: $dark2;
+          border: 2px solid $pri;
+          padding: 0 23px;
+        }
+      }
+    }
+  }
+
+  .images-banner {
+    background: url('../../images/background-banner.png') no-repeat;
+    font-size: 100%;
+    min-width: 540px;
+    height: 530px;
+    background-size: cover;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    opacity: .08;
+
+    @media (min-width: 1130px) {
+      animation: animaFadeCircles 3s;
+      position: relative;
+      opacity: 1;
+    }
+
+    .image {
+      width: 100px;
+      position: absolute;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 5px solid $light;
+
+      img {
+        width: 100%;
+        border-radius: inherit;
+      }
+
+      &:nth-child(1) {
+        @extend %propetCircle;
+        animation: animaCirclesCenter1 .9s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+        z-index: 1;
+      }
+
+      &:nth-child(2) {
+        @extend %propetCircle;
+        animation: animaCirclesCenter2 .9s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+      }
+
+      &:nth-child(3) {
+        @extend %propetCircle;
+        animation: animaCirclesCenter3 .9s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+      }
+
+      &:nth-child(4) {
+        @extend %propetCircle;
+        animation: animaCirclesCenter4 .9s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+      }
+
+      &:nth-child(5) {
+        @extend %propetCircle;
+        animation: animaCirclesCenter5 .9s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+      }
+
+      &:nth-child(6) {
+        @extend %propetCircle;
+        animation: animaCirclesCenter6 .9s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+      }
+
+      &:nth-child(7) {
+        @extend %propetCircle;
+        animation: animaCirclesCenter7 .9s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
 }

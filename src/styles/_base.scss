@@ -59,7 +59,7 @@ body {
 // Header do site
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 9;
   width: 100%;
   padding: 20px 0px;
   background-color: rgba($dark, 0.8);
@@ -129,6 +129,11 @@ body {
     border-radius: 50%;
     width: 32px;
     transition: .2s ease-in-out;
+    display: block;
+
+    &.iPhone {
+      display: none;
+    }
 
     &:hover {
       border: 2px solid $sec;

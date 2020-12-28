@@ -11,3 +11,9 @@ burger.forEach(element => {
     })
   });
 });
+
+let userAgent = window.navigator.userAgent;
+
+if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+  document.querySelector('.navbar').classList.add('iPhone');
+}

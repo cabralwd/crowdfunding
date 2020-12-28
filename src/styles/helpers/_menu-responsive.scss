@@ -43,16 +43,28 @@
     }
 
     img {
-      // border-radius: 50%;
       box-sizing: border-box;
       width: inherit;
     }
   }
 }
 
+.input-explorer {
+  &.mobi {
+    margin-top: 40px;
+    max-width: 100%;
+
+    input {
+      &[type="text"] {
+        width: inherit;
+      }
+    }
+  }
+}
+
 .navbar {
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   height: 100vh;
   width: 100vw;
   background-color: $dark;
@@ -60,6 +72,15 @@
   transition: 0.5s ease all;
   clip-path: circle(0% at 100% 0%);
   overflow-y: auto;
+  transform: translate3d(0, 0, 0);
+
+  &.iPhone {
+    z-index: -1;
+
+    &.nav-open {
+      z-index: 10;
+    }
+  }
 
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -168,7 +189,7 @@
       a {
         text-decoration: none;
         color: $pri;
-        font-size: 1rem;
+        font-size: 1.8rem;
         position: relative;
         font-weight: bold;
 
