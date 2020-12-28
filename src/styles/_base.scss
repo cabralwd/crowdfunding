@@ -56,6 +56,18 @@ body {
   margin: 0 auto;
 }
 
+// Título das seções
+.title-sections {
+  text-align: center;
+  font-size: 2em;
+
+  h2 {
+    font-size: inherit;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+}
+
 // Header do site
 .header {
   position: fixed;
