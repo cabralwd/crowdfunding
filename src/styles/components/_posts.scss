@@ -132,30 +132,6 @@
         }
 
       }
-
-      .call {
-        padding: 10px 25px;
-        background-color: $sec;
-        color: $light;
-        border: none;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 1rem;
-        cursor: pointer;
-        outline: none;
-        display: block;
-        margin: 10px 0 0;
-        // width: 100%;
-
-        &:hover {
-          font-weight: 700;
-          box-sizing: border-box;
-          background-color: $dark2;
-          border: 2px solid $pri;
-          padding: 8px 23px;
-        }
-      }
     }
   }
 }

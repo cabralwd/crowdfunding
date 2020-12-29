@@ -90,37 +90,6 @@
               color: $pri;
             }
           }
-
-          .progress-bar {
-            display: flex;
-            align-items: center;
-
-            .bar {
-              position: relative;
-              width: 80%;
-              background-color: rgba($pri, 0.3);
-            }
-
-            .progress {
-              position: absolute;
-              width: 40%;
-              background: linear-gradient(270deg, #2BA84A 0%, #2D3A3A 100%);
-            }
-
-            .bar,
-            .progress {
-              height: 7px;
-              display: block;
-              margin-right: 10px;
-              border-radius: 5px;
-
-            }
-
-            .percent {
-              font-weight: 700;
-              color: $pri;
-            }
-          }
         }
 
         .divisor {
