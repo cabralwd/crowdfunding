@@ -39,9 +39,13 @@
     .people {
       background: linear-gradient(to bottom, transparent 0%, transparent 70px, $light 70px, $light 100%);
       width: 100%;
-      font-size: 16px;
+      font-size: 130%;
       color: $dark;
       padding: 0px 30px 20px;
+
+      @include tamanho-tela(celular) {
+        font-size: 100%;
+      }
 
       &::before {
         content: '';
@@ -73,12 +77,12 @@
         font-size: 1.25em;
         color: $pri;
         margin: 10px 0px;
+        text-align: center;
       }
 
       .cite {
         font-weight: 500;
         font-style: italic;
-        text-align: left;
 
         span {
           font-size: 1.1em;
