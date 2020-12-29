@@ -59,6 +59,7 @@
       .image {
         img {
           width: 100%;
+          object-fit: fill;
         }
       }
 
@@ -165,7 +166,7 @@
     font-size: 100%;
     cursor: pointer;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0px 0px;
 
     p {
       font-weight: 500;

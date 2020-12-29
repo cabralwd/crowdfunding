@@ -54,6 +54,12 @@ export function scripts() {
     .pipe(browserSync.stream());
 }
 
+export function libs() {
+  return gulp
+    .src(['./node_modules/jquery/dist/jquery.js', './node_modules/owl.carousel/dist/owl.carousel.js'])
+    .pipe(gulp.dest(`${paths.scripts.dest}/libs`))
+}
+
 export function images() {
   return gulp
     .src(paths.images.src, { since: gulp.lastRun(images) })
@@ -78,7 +84,7 @@ export function watch() {
   gulp.watch('dist/index.html').on('change', browserSync.reload);
 }
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, views));
+const build = gulp.series(clean, gulp.parallel(styles, scripts, libs, images, views));
 
 const defaultTask = gulp.parallel(build, serve, watch);
 

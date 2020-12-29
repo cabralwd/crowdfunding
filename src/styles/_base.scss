@@ -321,5 +321,20 @@ main.cont {}
       color: $sec;
     }
   }
+}
 
+// dots carousel
+.owl-theme .owl-nav.disabled+.owl-dots {
+  margin-top: 20px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: rgba($dark, .7);
+  width: 16px;
+  height: 16px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: $light;
 }
