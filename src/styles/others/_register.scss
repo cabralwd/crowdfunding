@@ -12,6 +12,17 @@
     }
   }
 
+  .image {
+    @include tamanho-tela(apenas-celular) {
+      max-width: 190px;
+      margin: 0 auto;
+
+      img {
+        max-width: inherit;
+      }
+    }
+  }
+
   .register-caption {
     .input {
       display: grid;
