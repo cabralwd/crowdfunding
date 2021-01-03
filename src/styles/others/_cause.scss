@@ -226,7 +226,7 @@
       font-size: 100%;
     }
 
-    h2 {
+    li {
       border: 2px solid $sec;
       border-bottom: none;
       padding: 8px 20px;
@@ -240,7 +240,7 @@
         border-top-right-radius: 10px;
       }
 
-      &:nth-last-child(2n+1) {
+      &:nth-child(1n+2) {
         @include tamanho-tela(celular) {
           border-left: none;
         }
@@ -251,13 +251,30 @@
         color: $light;
         font-weight: 700;
       }
+
+      &.activeTab {
+        background: $dark2;
+        color: $light;
+        font-weight: 700;
+      }
     }
 
   }
 
-  .content {
+  .contents {
     padding: 20px;
     border: 2px solid $sec;
+
+    .tab-content {
+      display: none;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+
+      &:first-child {
+        transform: translateY(0px);
+        display: block;
+      }
+    }
 
     p {
       margin-bottom: 30px;
