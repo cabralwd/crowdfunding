@@ -19,12 +19,13 @@ if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
 }
 
 $(document).ready(function () {
+  let timeC = parseInt(document.querySelector('[data-timer]').dataset.timer, 10);
   $('.owl-carousel').owlCarousel({
     loop: false,
     autoplay: true,
     autoplayHoverPause: true,
     rewind: true,
-    autoplayTimeout: 1500,
+    autoplayTimeout: timeC,
     margin: 30,
     nav: false,
     dots: true,
