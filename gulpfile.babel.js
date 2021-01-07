@@ -56,7 +56,7 @@ export function scripts() {
 
 export function libs() {
   return gulp
-    .src(['./node_modules/jquery/dist/jquery.js', './node_modules/owl.carousel/dist/owl.carousel.js'])
+    .src(['./node_modules/jquery/dist/jquery.js', './node_modules/owl.carousel/dist/owl.carousel.js', './node_modules/vanilla-masker/lib/vanilla-masker.js'])
     .pipe(gulp.dest(`${paths.scripts.dest}/libs`))
 }
 
