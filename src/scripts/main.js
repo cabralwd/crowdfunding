@@ -13,8 +13,9 @@ burger.forEach(element => {
 });
 
 let userAgent = window.navigator.userAgent;
+let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i) || isSafari) {
   document.querySelector('.navbar').classList.add('iPhone');
 }
 
